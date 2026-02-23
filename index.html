@@ -12,40 +12,68 @@
 <body>
 
     <!-- الهيدر العلوي -->
-     <header>
+    <header>
         <div class="top-bar">
             <span>توصيل مجاني للطلبات فوق 200 درهم</span>
             <div class="top-links">
-                <!-- رابط صفحة التاجر -->
                 <a href="vendor.html">انضم كتاجر</a>
                 <a href="tel:00971509587666">الدعم: 0509587666</a>
             </div>
         </div>
 
         <nav class="navbar">
-            <div class="logo" onclick="location.href='index.html'" style="cursor: pointer;">
+            <!-- اللوجو يظل في اليمين وحده -->
+            <div class="logo" onclick="location.href='index.html'" style="order: 1; cursor: pointer;">
                 <div class="v-icon-box">V</div>
                 <span class="brand-name">Vorq</span>
             </div>
 
+            <!-- شريط البحث ينزل تحت في الموبايل -->
             <div class="search-bar">
                 <input type="text" id="searchInput" placeholder="ابحث عن ماركات، منتجات، تجار...">
                 <button><i class="fas fa-search"></i></button>
             </div>
 
-            <div class="nav-icons">
-                <!-- رابط صفحة المفضلة -->
+            <!-- الأيقونات ومعها المنيو في جهة اليسار -->
+            <div class="nav-icons" style="order: 2;">
+                <!-- الأيقونات الأصلية -->
                 <a href="wishlist.html" class="icon-item"><i class="far fa-heart"></i></a>
-                
                 <div class="icon-item" onclick="toggleCart()">
                     <i class="fas fa-shopping-bag"></i>
                     <span id="cart-count">0</span>
                 </div>
-
-                <!-- رابط صفحة الملف الشخصي -->
                 <a href="profile.html" class="icon-item"><i class="far fa-user"></i></a>
+
+                <!-- أيقونة المنيو أصبحت هنا في أقصى اليسار -->
+                <div class="icon-item menu-trigger" onclick="toggleMenu()">
+                    <i class="fas fa-bars"></i>
+                </div>
             </div>
         </nav>
+
+        <!-- القائمة الجانبية (موجودة بالفعل في كودك، قمت فقط بتنسيقها) -->
+        <div id="mobile-menu" class="mobile-menu">
+            <div class="menu-header"
+                style="display: flex; justify-content: space-between; align-items: center; flex-direction: row-reverse;">
+                <!-- اللوجو أصبح الآن على اليمين -->
+                <div class="logo" style="display: flex; align-items: center; gap: 10px;">
+                    <div class="v-icon-box" style="width: 35px; height: 35px; font-size: 18px;">V</div>
+                    <span style="font-size: 20px; font-weight: bold; color: white;">Vorq</span>
+                </div>
+
+                <!-- أيقونة الإغلاق أصبحت الآن على اليسار -->
+                <i class="fas fa-times" onclick="toggleMenu()"
+                    style="font-size: 22px; cursor: pointer; color: #888;"></i>
+            </div>
+            <ul class="menu-links">
+                <li><a href="index.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+                <li><a href="vendor.html" style="color: var(--vorq-yellow); font-weight: bold;"><i
+                            class="fas fa-store"></i> انضم كتاجر (ابدأ البيع)</a></li>
+                <li><a href="profile.html"><i class="fas fa-user"></i> حسابي</a></li>
+                <li><a href="wishlist.html"><i class="fas fa-heart"></i> المفضلة</a></li>
+                <li><a href="contact.html"><i class="fas fa-headset"></i> تواصل مع الدعم</a></li>
+            </ul>
+        </div>
 
         <!-- شريط التصنيفات -->
         <div class="categories-bar">
@@ -56,6 +84,7 @@
             <button onclick="filterProducts('supermarket')">سوبر ماركت</button>
         </div>
     </header>
+
     <!-- عربة التسوق الجانبية -->
     <div id="cart-sidebar" class="cart-sidebar">
         <div class="cart-header">
@@ -109,7 +138,11 @@
             </div>
         </div>
     </footer>
-
+    <!-- زر واتساب العائم -->
+    <a href="https://wa.me/971509587666" target="_blank"
+        style="position: fixed; bottom: 20px; right: 20px; background: #25D366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); z-index: 1000; text-decoration: none;">
+        <i class="fab fa-whatsapp"></i>
+    </a>
     <script src="script.js"></script>
 </body>
 

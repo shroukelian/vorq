@@ -100,3 +100,7 @@ document.getElementById('searchInput').addEventListener('input', (e) => {
 window.onload = () => renderProducts(products);
 
 
+
+function toggleMenu() {
+    document.getElementById('mobile-menu').classList.toggle('active');
+}
