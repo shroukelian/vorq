@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vorq | المتجر الشامل</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- الهيدر العلوي -->
+     <header>
+        <div class="top-bar">
+            <span>توصيل مجاني للطلبات فوق 200 درهم</span>
+            <div class="top-links">
+                <!-- رابط صفحة التاجر -->
+                <a href="vendor.html">انضم كتاجر</a>
+                <a href="tel:00971509587666">الدعم: 0509587666</a>
+            </div>
+        </div>
+
+        <nav class="navbar">
+            <div class="logo" onclick="location.href='index.html'" style="cursor: pointer;">
+                <div class="v-icon-box">V</div>
+                <span class="brand-name">Vorq</span>
+            </div>
+
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="ابحث عن ماركات، منتجات، تجار...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+
+            <div class="nav-icons">
+                <!-- رابط صفحة المفضلة -->
+                <a href="wishlist.html" class="icon-item"><i class="far fa-heart"></i></a>
+                
+                <div class="icon-item" onclick="toggleCart()">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span id="cart-count">0</span>
+                </div>
+
+                <!-- رابط صفحة الملف الشخصي -->
+                <a href="profile.html" class="icon-item"><i class="far fa-user"></i></a>
+            </div>
+        </nav>
+
+        <!-- شريط التصنيفات -->
+        <div class="categories-bar">
+            <button onclick="filterProducts('all')">الكل</button>
+            <button onclick="filterProducts('electronics')">إلكترونيات</button>
+            <button onclick="filterProducts('fashion')">أزياء</button>
+            <button onclick="filterProducts('home')">المنزل</button>
+            <button onclick="filterProducts('supermarket')">سوبر ماركت</button>
+        </div>
+    </header>
+    <!-- عربة التسوق الجانبية -->
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>سلة المشتريات</h3>
+            <span class="close-cart" onclick="toggleCart()">&times;</span>
+        </div>
+        <div id="cart-items-list">
+            <!-- المنتجات المضافة تظهر هنا -->
+        </div>
+        <div class="cart-footer">
+            <div class="total-price">الإجمالي: <span id="cart-total">0</span> درهم</div>
+            <button class="checkout-btn" onclick="location.href='success.html'">إتمام الشراء</button>
+        </div>
+    </div>
+
+    <!-- القسم الرئيسي -->
+    <main class="container">
+        <section class="banner">
+            <div class="banner-text">
+                <h2>عروض الصيف من Vorq</h2>
+                <p>خصومات تصل إلى 50% على الإلكترونيات</p>
+            </div>
+        </section>
+
+        <h2 class="section-title">المنتجات المقترحة لك</h2>
+        <div class="products-grid" id="product-display">
+            <!-- المنتجات يتم توليدها بواسطة JS -->
+        </div>
+    </main>
+
+    <!-- فوتر احترافي -->
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <h3>عن Vorq</h3>
+                <p>منصة تجارة إلكترونية إماراتية تجمع أفضل التجار لتقديم أجود المنتجات.</p>
+                <p>Email: Info@vorq.io</p>
+            </div>
+            <div>
+                <h3>روابط سريعة</h3>
+                <ul>
+                    <li><a href="#">سياسة التوصيل</a></li>
+                    <li><a href="#">إرجاع السلع</a></li>
+                    <li><a href="#">الشروط والأحكام</a></li>
+                </ul>
+            </div>
+            <div class="newsletter">
+                <h3>اشترك في النشرة البريدية</h3>
+                <input type="email" placeholder="بريدك الإلكتروني">
+                <button>اشترك</button>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
