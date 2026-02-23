@@ -1755,3 +1755,38 @@ aside li:hover {
 
 
 
+/* =========================================
+   تعديل هيدر الديسكتوب (إرجاع اللوجو لليمين)
+   ========================================= */
+
+@media (min-width: 769px) {
+    .navbar {
+        display: flex !important;
+        flex-direction: row !important; /* ضمان الترتيب الأفقي */
+        justify-content: flex-start !important; /* يبدأ من اليمين */
+        gap: 40px !important; /* مسافة بين اللوجو والسيرش */
+        padding: 10px 5% !important;
+    }
+
+    /* 1. اللوجو أول حاجة على اليمين */
+    .logo {
+        order: 1 !important;
+        display: flex !important;
+        align-items: center !important;
+        margin: 0 !important;
+    }
+
+    /* 2. السيرش في النص بعد اللوجو */
+    .search-bar {
+        order: 2 !important;
+    
+    }
+
+    /* 3. الأيقونات تروح أقصى الشمال */
+    .nav-icons {
+        order: 3 !important;
+        margin-right: auto !important; /* دي اللي بتزق الأيقونات لليسار تماماً */
+        display: flex !important;
+        gap: 25px !important;
+    }
+}
