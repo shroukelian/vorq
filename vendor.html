@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,9 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+
 <body>
-   <header>
+    <header>
         <div class="top-bar">
             <span>أهلاً بك في حسابك الشخصي</span>
             <div class="top-links">
@@ -32,22 +34,30 @@
         </nav>
     </header>
 
-    <main class="container" style="max-width: 600px; margin: 50px auto; background: white; padding: 40px; border-radius: 20px; box-shadow: var(--shadow);">
+    <main class="container"
+        style="max-width: 600px; margin: 50px auto; background: white; padding: 40px; border-radius: 20px; box-shadow: var(--shadow);">
         <h2 style="text-align:center; color: var(--primary);">كن شريكاً لـ Vorq</h2>
-        <p style="text-align:center; color: #666; margin-bottom: 30px;">افتح متجرك الآن واوصل لآلاف الزبائن في الإمارات</p>
-        
+        <p style="text-align:center; color: #666; margin-bottom: 30px;">افتح متجرك الآن واوصل لآلاف الزبائن في الإمارات
+        </p>
+
         <form style="display: flex; flex-direction: column; gap: 15px;">
             <input type="text" placeholder="اسم المتجر" style="padding:12px; border-radius:8px; border:1px solid #ddd;">
-            <input type="email" placeholder="البريد الإلكتروني للأعمال" style="padding:12px; border-radius:8px; border:1px solid #ddd;">
-            <input type="tel" placeholder="رقم الهاتف (مثل 0509587666)" style="padding:12px; border-radius:8px; border:1px solid #ddd;">
+            <input type="email" placeholder="البريد الإلكتروني للأعمال"
+                style="padding:12px; border-radius:8px; border:1px solid #ddd;">
+            <input type="tel" placeholder="رقم الهاتف (مثل 0509587666)"
+                style="padding:12px; border-radius:8px; border:1px solid #ddd;">
             <select style="padding:12px; border-radius:8px; border:1px solid #ddd;">
                 <option>تصنيف المنتجات</option>
                 <option>إلكترونيات</option>
                 <option>أزياء</option>
                 <option>منزل</option>
             </select>
-            <button type="submit" class="add-btn" style="padding:15px; font-size:18px;">إنشاء حساب التاجر</button>
+            <button type="button" class="add-btn" onclick="location.href='vendor-dashboard.html'"
+                style="padding:15px; font-size:18px;">
+                إنشاء حساب التاجر
+            </button>
         </form>
     </main>
 </body>
+
 </html>
